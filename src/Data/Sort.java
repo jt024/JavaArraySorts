@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package Data;
-
+import java.util.Arrays;
 /**
  *
  * @author jt024
  */
 public class Sort {
 
-    private int intTempArray[];
+    private int intTempArray[] = new int[0];
     
  
     
@@ -25,7 +25,7 @@ public class Sort {
 
 
     // <editor-fold defaultstate="collapsed" desc="**Bubble Sorts**">   
-/************************************************************************
+/**Method Comments*******************************************************
  * Name: intBubble()                                                    *
  * Description: Standard bubble sort method for a array of integers     *
  * Author: Johnny Trevino                                               *
@@ -46,13 +46,13 @@ public class Sort {
                 }
     }
     
-/************************************************************************
+/**Method Comments*******************************************************
  * Name: intBubbleRec()                                                 *
  * Description: Recursive bubble sort method for a array of integers    *
  * Author: Johnny Trevino                                               *
- * Date: 8/12/2017                                                       *
+ * Date: 8/12/2017                                                      *
  * @param arr                                                           *
- * @param n
+ * @param n                                                             *
  ************************************************************************/    
     public void intBubbleRec(int arr[], int n) // Function to implement bubble sort
     {
@@ -74,7 +74,13 @@ public class Sort {
     // </editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="**Insertion Sorts**">     
-    /*Function to sort array using insertion sort*/
+/**Method Comments*******************************************************
+ * Name: intInsertion()                                                 *
+ * Description: Standard insertion sort method for a array of integers  *
+ * Author: Johnny Trevino                                               *
+ * Date: 09/22/2017                                                     *
+ * @param arr                                                           *
+ ************************************************************************/
     public void intInsertion(int arr[])
     {
         int n = arr.length;
@@ -94,9 +100,14 @@ public class Sort {
             arr[j+1] = key;
         }
     }
-
-    // Recursive function to sort an array using
-    // insertion sort
+/**Method Comments*******************************************************
+ * Name: intInsertionRec()                                              *
+ * Description: Recursive insertion sort method for a array of integers *
+ * Author: Johnny Trevino                                               *
+ * Date: 09/22/2017                                                     *
+ * @param arr                                                           *
+ * @param n
+ ************************************************************************/    
     public void intInsertionRec(int arr[], int n)
     {
         intTempArray = arr;
@@ -105,22 +116,22 @@ public class Sort {
             return;
       
         // Sort first n-1 elements
-        intInsertionRec(intTempArray, n-1 );
+        intInsertionRec(arr, n-1 );
       
         // Insert last element at its correct position
         // in sorted array.
-        int last = intTempArray[n-1];
+        int last = arr[n-1];
         int j = n-2;
       
         /* Move elements of arr[0..i-1], that are
           greater than key, to one position ahead
           of their current position */
-        while (j >= 0 && intTempArray[j] > last)
+        while (j >= 0 && arr[j] > last)
         {
-            intTempArray[j+1] = arr[j];
+            arr[j+1] = arr[j];
             j--;
         }
-        intTempArray[j+1] = last;
+        arr[j+1] = last;
     }    
     // </editor-fold>  
     
