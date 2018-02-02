@@ -24,10 +24,6 @@ public class Sort {
     public Sort(int num[]){
         numbers = num;
     }
-    
-    
-    
-    
     public int[] getIntArray(){
         return numbers;
     }
@@ -148,7 +144,6 @@ public class Sort {
         arr[j+1] = last;
     }    
     // </editor-fold>  
-    
 
     // <editor-fold defaultstate="collapsed" desc="**Quick Sort**"> 
     
@@ -246,7 +241,6 @@ public class Sort {
     
     // </editor-fold>       
 
-
     // <editor-fold defaultstate="collapsed" desc="**Shell Sort**"> 
     
     public int shellSort(int arr[]){
@@ -282,7 +276,13 @@ public class Sort {
     
     // </editor-fold>  
 
-
+    // <editor-fold defaultstate="collapsed" desc="**Heap Sort**">     
+    
+    
+    
+    
+    
+// </editor-fold>
 
     
 // </editor-fold>    
